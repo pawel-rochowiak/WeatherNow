@@ -1,0 +1,139 @@
+.weatcher-forecast__airStatus {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgba($color-white, 0.4);
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+
+  @include respond(md-desktop) {
+    gap: 1rem;
+  }
+
+  @include respond(sm-tab) {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+  }
+
+  @include respond(lg-phone) {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    gap: 3rem;
+  }
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media (min-aspect-ratio: 16/10) {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 1.2rem;
+    color: #fff;
+    top: 0;
+    transform: translateY(-50%);
+    background-color: $color-tertiary-dark;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+    @include respond(sm-tab) {
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+
+    @include respond(lg-phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__status {
+    margin-top: 3rem;
+    font-size: 6rem;
+    font-family: inherit;
+    color: $color-tertiary-dark;
+
+    @include respond(md-desktop) {
+      font-size: 4rem;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      justify-self: center;
+    }
+
+    @include respond(sm-tab) {
+      font-size: 4rem;
+      margin-left: 2rem;
+    }
+
+    @include respond(lg-phone) {
+      margin-left: 0;
+    }
+  }
+  &__details {
+    margin-bottom: 3rem;
+    display: grid;
+    gap: 5rem;
+    font-size: 2.5rem;
+    color: $color-tertiary-dark;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    @include respond(md-desktop) {
+      gap: 3rem;
+      font-size: 2rem;
+    }
+
+    @include respond(tab-land) {
+      gap: 4rem;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(sm-tab) {
+      margin-top: 3rem;
+      flex-direction: row;
+      gap: 5rem;
+      font-size: 2.5rem;
+    }
+
+    @include respond(lg-phone) {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-aspect-ratio: 16/10) {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.airStatus-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__type {
+    font-weight: 700;
+  }
+  &__value {
+    font-weight: 300;
+  }
+}

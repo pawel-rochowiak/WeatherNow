@@ -1,0 +1,79 @@
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin basicRect {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+}
+
+//Media query
+/*
+0-600px; Phone
+600-900px: tablet portrait
+900-1200px: Tablet landscape
+[1200-1800] is where normal styles apply
+1800px + Big Desktops
+*/
+/*
+$breakpoint argument choises;
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+order Base + typography > generel layout + grid > page layout> 
+
+1em=16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm-phone {
+    @media (max-width: 28em) {
+      @content;
+    } //~448px
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 30em) {
+      @content;
+    } //480px
+  }
+  @if $breakpoint == lg-phone {
+    @media only screen and (max-width: 36.87em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == sm-tab {
+    @media (max-width: 46em) {
+      @content;
+    } //750px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == md-horizon {
+    @media only screen and (max-width: 56.25em) and (orientation: landscape) {
+      @content;
+    } //900px horizontal
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 80em) {
+      @content;
+    } //1270px
+  }
+  @if $breakpoint == md-desktop {
+    @media (max-width: 85em) {
+      @content;
+    } //1400px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}

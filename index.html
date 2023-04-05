@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="css/IMG/weatherApp_fav.jpg"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script type="module" src="script.js"></script>
+    <title>Weather Now!</title>
+  </head>
+  <body>
+    <div class="hero-search">
+      <img
+        class="hero-search__logo"
+        src="css/IMG/weatherAppLogo.png"
+        alt="Logo of the wearcher app"
+      />
+      <span>Check the weather at&nbsp;your location!</span>
+      <div class="form">
+        <button class="btn btn__local" type="submit">
+          <svg class="btn__icon--md">
+            <use xlink:href="img/sprite.svg#icon-location"></use>
+          </svg>
+        </button>
+
+        <input
+          type="text"
+          class="hero-search__input"
+          placeholder="Please type name of your city:)"
+        />
+        <span class="search__helper__text"
+          >The search field cannot be empty!</span
+        >
+        <button class="btn hero-search__btn" type="submit">
+          <svg class="btn__icon--sm">
+            <use xlink:href="img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Weather data provided by
+      <a
+        href="https://openweathermap.org/"
+        class="footer__api-link"
+        target="_blank"
+      >
+        OpenWeather API</a
+      >. Custom map provided by
+      <a href="https://www.mapbox.com/" class="footer__api-link" target="_blank"
+        >MapBox</a
+      >. Online weather app designed by
+      <span class="footer__author"
+        ><a
+          href="https://www.linkedin.com/in/paweł-rochowiak-847373104"
+          class="footer__author-link"
+          target="_blank"
+          >Paweł Rochowiak.</a
+        ></span
+      >
+    </footer>
+  </body>
+</html>

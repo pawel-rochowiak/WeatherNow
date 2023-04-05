@@ -1,0 +1,135 @@
+.new-order {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+//////////////////////////////////////////
+// Startup CSS
+
+.hero-search {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include center;
+  width: 50vw;
+  height: 50vh;
+  box-shadow: $box-shadow-light;
+  background-color: rgba($color-white, 0.4);
+  padding: 2rem;
+  border-radius: 1.6rem;
+  text-align: center;
+
+  @include respond(sm-tab) {
+    width: 70vw;
+    height: 55vh;
+  }
+
+  @include respond(phone) {
+    width: 80vw;
+    height: 55vh;
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  @include respond(sm-phone) {
+    width: 90vw;
+    height: 65vh;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  @include respond(md-horizon) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+  & span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: $box-shadow;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    color: $color-tertiary-dark;
+
+    @include respond(sm-tab) {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 2.5rem;
+      margin-bottom: 0rem;
+    }
+
+    @include respond(sm-phone) {
+      font-weight: 2rem;
+    }
+
+    @include respond(md-horizon) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__logo {
+    height: 12rem;
+    margin-bottom: 3rem;
+    width: auto;
+    transition: all 0.4s;
+
+    @include respond(phone) {
+      height: 12rem;
+      width: auto;
+      margin-bottom: 0rem;
+    }
+
+    @include respond(md-horizon) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__input {
+    height: 100%;
+    width: 60%;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    border: none;
+    &:focus {
+      outline: 2px solid $color-tertiary-dark;
+    }
+    &::placeholder {
+      color: $color-gray-dark-2;
+    }
+
+    @include respond(lg-phone) {
+      width: 100%;
+      grid-column: 1 / span 5;
+    }
+  }
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+
+  @include respond(lg-phone) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.search__helper__text {
+  position: absolute;
+  font-weight: 200;
+  font-size: 1.2rem !important;
+  top: 0rem;
+  opacity: 0;
+  transition: all 0.5s;
+}

@@ -1,0 +1,36 @@
+.modal {
+  z-index: 10000;
+  position: absolute;
+  width: 50vw;
+  height: 30vh;
+  padding: 1rem;
+  background-color: rgba($color-white, 1);
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  backdrop-filter: blur(10rem);
+  @include center;
+
+  @include respond(phone) {
+    width: 60vw;
+    height: 40vh;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background-color: $color-tertiary-dark;
+    color: #fff;
+    border: none;
+  }
+  &__text {
+    font-size: 2.3rem;
+    width: 100%;
+    padding: 2rem;
+    @include center;
+  }
+}

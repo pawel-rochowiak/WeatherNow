@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  padding: 4rem;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-tertiary-dark,
+    $color-tertiary-light
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(md-desktop) {
+    padding: 4rem 4rem 5rem 4rem;
+  }
+  @include respond(phone) {
+    padding: 4rem 4rem 7rem 4rem;
+  }
+  @include respond(sm-phone) {
+    padding: 2rem 2rem 7rem 2rem;
+  }
+}
+
+.body__generated {
+  height: 100vh;
+  @include respond(tab-port) {
+    height: auto;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}

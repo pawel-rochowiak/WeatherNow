@@ -1,0 +1,43 @@
+.active {
+  background-image: linear-gradient(
+    to bottom,
+    $color-tertiary-dark,
+    $color-tertiary-light
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  fill: #fff;
+  color: #fff;
+  & span {
+    color: #fff;
+  }
+  & svg {
+    fill: #fff;
+  }
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+.bg-light {
+  background-color: rgba($color-white, 0.4);
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}

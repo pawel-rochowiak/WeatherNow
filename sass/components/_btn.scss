@@ -1,0 +1,90 @@
+.btn {
+  height: 4rem !important;
+  width: 4rem !important;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-tertiary-dark,
+    $color-tertiary-light
+  );
+
+  @include respond(lg-phone) {
+    border-radius: 1rem;
+    width: 100% !important;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn__local {
+  background-image: linear-gradient(to bottom right, #fff, #fff);
+
+  @include respond(lg-phone) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.btn__icon--sm {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: #fff;
+}
+
+.btn__icon--md {
+  height: 2rem;
+  width: 2rem;
+  fill: $color-tertiary-dark;
+}
+
+.hero-search__btn {
+  width: 20%;
+  height: auto;
+
+  @include respond(lg-phone) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+}
+
+.slider__btn {
+  //position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: $color-tertiary-dark;
+  font-family: inherit;
+  color: #fff;
+  border-radius: 1rem;
+  height: 5.5rem;
+  //width: 4.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 0;
+}
+
+.slider__btn--right {
+  right: 0;
+}
+
+.display {
+  display: none;
+  visibility: hidden;
+
+  @include respond(lg-phone) {
+    display: grid;
+    visibility: visible;
+  }
+}
